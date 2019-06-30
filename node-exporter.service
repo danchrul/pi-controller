@@ -1,0 +1,13 @@
+[Unit]
+Description=node exporter service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu
+ExecStart=/usr/bin/node_exporter
+
+[Install]
+WantedBy=multi-user.target
